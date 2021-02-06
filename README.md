@@ -1,2 +1,2 @@
 # Projeto_NodeJS_Recode_Pro
- Projeto realizado no curso de NodeJS da Recode Pro
+ Projeto realizado do curso de NodeJs da Recode_Pro
