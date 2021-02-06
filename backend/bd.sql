@@ -48,7 +48,7 @@ create table clientes (
     nome VARCHAR(25)NOT NULL,
     sobrenome VARCHAR(25) NOT NULL,
     cpf VARCHAR(25) NOT NULL,
-    cep BIGINT(50) NOT NULL;
+    cep BIGINT(50) NOT NULL,
     telefone BIGINT(50),
     email VARCHAR(50) NOT NULL,
     FOREIGN KEY (idProdutos) REFERENCES produtos(idproduto)
