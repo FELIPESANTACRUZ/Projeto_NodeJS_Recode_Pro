@@ -10,7 +10,7 @@ const ProdutosPage = () => {
     const [idpro, setIdpro] = useState(0);
 
     useEffect(async () => {
-        const url = "http://localhost:5000/produtos";
+        const url = "http://localhost:5000/products";
         const res = await fetch(url);
         setProps(await res.json());
     }, [])
@@ -42,17 +42,17 @@ const ProdutosPage = () => {
                         return(
                             <div className="col-3  text-center pl-2">
                                 <div className="card my-2 "  >
-                                    <div  key={row._id} style={{width:"12rem" }}>
-                                            <img src={row.imagen} className="card-img-center"style={{width:"150px" }}onMauseOver={destaque}/>
+                                    <div  key={row.idproduto} style={{width:"12rem" }}>
+                                            <img src={row.imagem} className="card-img-center"style={{width:"150px" }}onMauseOver={destaque}/>
                                             <div className="card-body">
-                                                <h5 id={row._id}className="card-title text-center text-danger h4"><strong>{row.categoria}</strong></h5>
+                                                <h5 id={row.idproduto}className="card-title text-center text-danger h4"><strong>{row.nomeProduto}</strong></h5>
                                                 <p className="card-text text-center">
-                                                    <strong>{row.descripcao} </strong></p>
+                                                    <strong>{row.descricao} </strong></p>
                                                 <p className="card-text text-center"><del>
                                                     {row.preco}</del></p>
                                                 <p className="card-text text-center text-danger h4"><strong>
-                                                {row.precoFinal} </strong></p>
-                                                <a role="button" className="btn btn-danger mx-auto"  onClick={() => saveId(row._id)}>Comprar</a>
+                                                {row.preco_venda} </strong></p>
+                                                <a role="button" className="btn btn-danger mx-auto"  onClick={() => saveId(row.idproduto)}>Comprar</a>
                                             </div>
                                     </div>
                                 </div>

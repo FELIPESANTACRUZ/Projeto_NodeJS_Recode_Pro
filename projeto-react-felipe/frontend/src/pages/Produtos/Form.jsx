@@ -10,7 +10,7 @@ export default function Form({ children }) {
 
     useEffect(() => {
         async function chamaApi() {
-            const url = "http://localhost/loja_fseletro/backend/indexUsuario.php";
+            const url = "http://localhost:5000/products";
             const res = await fetch(url);
             setUsuario(await res.json());
         }
@@ -20,7 +20,7 @@ export default function Form({ children }) {
     async function registroVenda(event) {
         event.preventDefault();
         let formData = new FormData(event.target);
-        const url = "http://localhost/loja_fseletro/backend/registerUsuarios.php";
+        const url = "http://localhost:5000/products";
 
         fetch(url, {
             method: "POST",
